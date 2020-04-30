@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { OfertaService } from '../services/oferta.service';
@@ -10,7 +10,7 @@ import { Oferta } from '../model/oferta.model';
   styleUrls: ['./oferta.component.css'],
   providers: [ OfertaService ]
 })
-export class OfertaComponent implements OnInit {
+export class OfertaComponent implements OnInit, OnDestroy {
 
   private route: ActivatedRoute;
   private ofertaService: OfertaService;
@@ -37,6 +37,37 @@ export class OfertaComponent implements OnInit {
         console.log(erro);
 
       } )
+
   }
 
+  ngOnDestroy(){
+
+  }
 }
+
+
+
+
+
+
+
+      // //Observável
+      // let meuObservavel = Observable.create( (observer: Observer<string>) => {
+      //   observer.next("Faça 1");
+      //   observer.next("E faça 2");
+      //   //observer.error("ERRO - FINALIZANDO A STREAM");
+      //   observer.complete();
+      // })
+
+      // //Observador
+      // meuObservavel.subscribe(
+      //   (resultado: string) => { //pegando o que vem de "next()"
+      //     console.log(resultado);
+      //   },
+      //   (erro: any) => {  //pegando o que vem de "error()"
+      //     console.log(erro);
+      //   },
+      //   () => {     // caiu no método "complete()"
+      //     console.log("FINALIZADA")
+      //   }
+      // )
