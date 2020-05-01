@@ -14,6 +14,8 @@ export class RestauranteComponent implements OnInit {
   private ofertas: Array<Oferta>;
   private ofertaService: OfertaService;
   
+  private data: any = Date.now();
+
   constructor(ofertaService: OfertaService) {
       this.ofertaService = ofertaService;
   }

@@ -20,7 +20,6 @@ export class TopoComponent implements OnInit {
 
   private ofertaService: OfertaService;
   private ofertasObservable: Observable<Oferta[]>;
-  private ofertas: Oferta[];
 
   //O subject ele funciona como observador e observável. 
   // É utilizado para manipular dados antes de reenviar ao fluxo de eventos
@@ -42,32 +41,30 @@ export class TopoComponent implements OnInit {
           }
         ),
         catchError( 
-          (err: any) => {
-            console.log(err)
+          (erro: any) => {
+            console.log(erro)
             return Observable.of<Oferta[]>([]);
           }
         )
       )
     
-      this.ofertasObservable.subscribe(
-        ( ofertas: Oferta[] ) => {   //capturando o método next() do observável
-          this.ofertas = ofertas; 
-        },
-        ( erro: any ) => {          // capturando o método error() do observável
-          console.log("Erro status: " + erro)
-        },
-        ( ) => {//capturando o método complete() do observável.OBS: esse método não tem retorno
-          console.log("Steam de eventos finalizada")
-        }
-      )
+    /*MÉTODO SUBSTITUIDO PELO PIPE async, ou seja o atributo no template vai se inscrever no Observable*/
+      // this.ofertasObservable.subscribe(
+      //   ( ofertas: Oferta[] ) => {   //capturando o método next() do observável
+      //     this.ofertas = ofertas; 
+      //   },
+      //   ( erro: any ) => {          // capturando o método error() do observável
+      //     console.log("Erro status: " + erro)
+      //   },
+      //   ( ) => {//capturando o método complete() do observável.OBS: esse método não tem retorno
+      //     console.log("Steam de eventos finalizada")
+      //   }
+      // )
   }
 
  
   public pesquisa(termoDaBusca: string): void {
-    console.log("keyup", termoDaBusca)
     this.subjectPesquisa.next(termoDaBusca) 
-
-
 
     // this.ofertasObservable = this.ofertaService.pesquisaOfertas(termo)
     
@@ -82,5 +79,9 @@ export class TopoComponent implements OnInit {
     //     console.log("Steam de eventos finalizada")
     //   }
     // )
+  }
+
+  public limpaPesquisa(): void {
+    this.subjectPesquisa.next('');
   }
 }

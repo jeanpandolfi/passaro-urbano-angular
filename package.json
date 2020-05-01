@@ -21,6 +21,7 @@
     "@angular/router": "~8.2.14",
     "@popperjs/core": "^2.2.1",
     "bootstrap": "^4.4.1",
+    "intl": "^1.2.5",
     "jquery": "^3.4.1",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.5.5",
