@@ -22,7 +22,7 @@
     "@popperjs/core": "^2.2.1",
     "bootstrap": "^4.4.1",
     "intl": "^1.2.5",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.5.5",
     "tslib": "^1.10.0",
