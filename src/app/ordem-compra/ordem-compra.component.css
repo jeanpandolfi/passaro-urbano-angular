@@ -18,3 +18,7 @@ input.ng-valid.ng-touched {
 select.ng-valid.ng-touched {
     border: solid 1px green;
 }
+
+small.ng-invalid.ng-touched {
+    color: red;
+}

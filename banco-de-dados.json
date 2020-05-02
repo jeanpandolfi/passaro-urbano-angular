@@ -248,6 +248,13 @@
       "complemento": "cxcxc",
       "formaPagamento": "dinheiro",
       "id": 9
+    },
+    {
+      "endereco": "Rua das pedras",
+      "numero": "22",
+      "complemento": "Casa branca",
+      "formaPagamento": "dinheiro",
+      "id": 10
     }
   ]
 }
