@@ -1,11 +1,11 @@
 import { Oferta } from '../model/oferta.model'
-import { HttpClient, HttpErrorResponse } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
 
 import { URL_API } from '../app.api';
-import { Observable, throwError } from 'rxjs';
+import { Observable } from 'rxjs';
 
-import { map, retry, catchError } from 'rxjs/operators';
+import { map, retry } from 'rxjs/operators';
 import 'rxjs/operators/map';
 
 @Injectable()
