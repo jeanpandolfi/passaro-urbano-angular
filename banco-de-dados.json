@@ -255,6 +255,13 @@
       "complemento": "Casa branca",
       "formaPagamento": "dinheiro",
       "id": 10
+    },
+    {
+      "endereco": "Beco escuro",
+      "numero": "157",
+      "complemento": "Tome cuidado",
+      "formaPagamento": "dinheiro",
+      "id": 11
     }
   ]
 }

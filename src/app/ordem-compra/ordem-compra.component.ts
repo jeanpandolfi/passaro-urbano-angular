@@ -40,6 +40,8 @@ export class OrdemCompraComponent implements OnInit {
         (pedidoSalvo: Pedido) => {
           console.log(pedidoSalvo);
           this.idPedidoCompra = pedidoSalvo.id;
+          sessionStorage.setItem('idPedido', this.idPedidoCompra.toString())
+          localStorage.setItem('idPedido', this.idPedidoCompra.toString())
         }
       )
     
